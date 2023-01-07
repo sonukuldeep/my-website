@@ -1,7 +1,8 @@
+import { FormEvent } from 'react';
 import styles from '../styles/Blog.module.scss'
 
 const Blog = () => {
-    const handleSubmit = e => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         const form = e.target;
         console.log('email', form.email, form.elements.email);
