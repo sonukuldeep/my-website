@@ -1,0 +1,9 @@
+.container {
+    width: 90vw;
+    margin-inline: auto;
+
+    @media(min-width > 876px) {
+        width: 98vw;
+
+    }
+}

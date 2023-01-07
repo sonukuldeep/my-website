@@ -1,0 +1,47 @@
+$paddingX: 0 10px;
+
+.header {
+    // color: ${({theme})=>theme.colors.lightGray};
+    color: #fff;
+    position: relative;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .hero {
+        z-index: -1;
+        background: url('../components/assets/images/hero_img.jpg');
+        object-fit: cover;
+        background-position: center center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        margin: 5px 10%;
+        padding: $paddingX;
+        border-radius: 4px;
+        display: inline-block;
+        background-color: var(--stone-2);
+        color: var(--gray-6);
+        box-shadow: var(--shadow-2);
+    }
+
+    .btn {
+        margin-left: 10%;
+        color: var(--gray-6);
+        font-weight: var(--font-weight-9);
+        font-size: var(--font-size-2);
+        padding: 10px 30px;
+
+    }
+
+    .btn:hover {
+        animation: var(--animation-shake-x) forwards;
+        // animation-timing-function: var(--ease-squish-3);
+        animation-duration: 300ms;
+    }
+}

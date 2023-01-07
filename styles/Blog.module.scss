@@ -1,0 +1,46 @@
+@mixin fullwidth_bg {
+    --bg-color: hsl(200 50% 20%);
+    box-shadow: 0 0 0 100vmax var(--bg-color);
+    clip-path: inset(0 -100vmax);
+    background-color: var(--bg-color);
+    color: #efefef;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--gray-6);
+    margin: 10px 0;
+    height: 300px;
+    @include fullwidth_bg;
+
+    h2 {
+        color: var(--gray-2);
+        padding: 1% 0;
+    }
+
+    label {
+        color: var(--gray-2);
+        margin: 5px 0;
+    }
+
+    select {
+        color: var(--gray-2);
+        border: none;
+        padding: 0 5px;
+        margin: 5px;
+        background-color: var(--bg-color);
+    }
+
+    select:hover {
+        color: #333;
+        background-color: var(--gray-2);
+    }
+
+    button {
+        padding: 5px 10px;
+        margin: auto;
+    }
+}
