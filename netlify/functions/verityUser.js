@@ -2,7 +2,7 @@
 exports.handler = async (event,context) => {
     try {
         const { name } = JSON.parse(event.body)
-        const greeting = `Hello ${name}`
+        const greeting = {greeting: `Hello ${name}`}
         return {
             statusCode: 200,
             headers: {
