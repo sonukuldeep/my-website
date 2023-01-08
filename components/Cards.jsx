@@ -3,9 +3,9 @@ import DataContext from '../context/DataContext'
 import style from '../styles/Cards.module.scss'
 import Card from './Card'
 import { data } from './mock_data.js'
-
+import  React from 'react'
 const Cards = () => {
-    const { goTo } = useContext(DataContext)
+    const goTo = useContext(DataContext)?.goTo
     return (
         <div className={style.container}>
             <h2 ref={goTo}>Choose the style you are go for</h2>

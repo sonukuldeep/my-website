@@ -2,11 +2,11 @@ import { FormEvent } from 'react';
 import styles from '../styles/Blog.module.scss'
 
 const Blog = () => {
-    const handleSubmit = (e: any) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const form = e.target;
-        console.log('email', form.email, form.elements.email);
-        console.log('name', form.name, form.elements.name);
+        const form = e.target as HTMLFormElement
+        console.log('email', form.email);
+        console.log('name', form.name);
     }
 
     return (

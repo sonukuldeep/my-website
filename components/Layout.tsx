@@ -4,8 +4,9 @@ import Header from './Header'
 import styles from '../styles/Layout.module.scss'
 import Footer from './Footer'
 import DataState from '../context/DataState'
+import React from 'react'
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <Meta />

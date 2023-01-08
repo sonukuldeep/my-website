@@ -1,5 +1,5 @@
 import styles from '../styles/Header.module.scss'
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import DataContext from '../context/DataContext';
 
 const Header = () => {
