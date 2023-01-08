@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const testHandler = async (name: string) => {
-    fetch('/netlify/function/verity-user.js',
+    fetch('/netlify/functions/verity-user.js',
         {
             method: 'post',
             headers: {
@@ -18,7 +18,7 @@ const Test = () => {
     return (
         <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', gap: '5px', marginTop: '20px' }}>
             <input type="text" value={name} onChange={e => setName(e.target.value)} />
-            <button style={{ width: 'maxContent', padding: '5px 10px' }} onClick={() => TestHandler(name)}>Click for console log</button>
+            <button style={{ width: 'maxContent', padding: '5px 10px' }} onClick={() => testHandler(name)}>Click for console log</button>
         </div>
     )
 }
