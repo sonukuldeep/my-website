@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const testHandler = async (name: string) => {
-    fetch('/.netlify/functions/verity-user',
+    fetch('https://remarkable-naiad-ae3a2a.netlify.app/.netlify/functions/verity-user',
         {
             method: 'post',
             headers: {
