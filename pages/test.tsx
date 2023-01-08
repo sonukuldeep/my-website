@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const testHandler = async (name: string) => {
-    fetch('/.netlify/function/verity-user.js',
+    fetch('/netlify/function/verity-user.js',
         {
             method: 'post',
             headers: {

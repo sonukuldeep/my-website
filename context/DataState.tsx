@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
 
-export interface childrenType {
+interface childrenType {
   children: React.ReactNode
 }
 
