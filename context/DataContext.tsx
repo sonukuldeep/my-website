@@ -1,5 +1,5 @@
 import React,{ createContext } from "react";
 
-const DataContext = createContext(undefined);
+const DataContext = createContext<string|undefined>(undefined);
 
 export default DataContext;
