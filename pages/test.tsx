@@ -9,7 +9,7 @@ const testHandler = async (name: string) => {
             },
             body: JSON.stringify({ name })
         })
-        .then(res => res.json)
+        .then(res => res.json())
         .then(data => console.log(data))
 
 }
