@@ -1,0 +1,38 @@
+.container {
+    display: grid;
+    padding-top: 60px;
+    gap: 20px;
+    grid-template-areas:
+        "image features"
+        "desc desc"
+        "bill bill";
+
+    @media (max-width: 768px) {
+        grid-template-areas:
+            "image"
+            "features"
+            "desc"
+            "bill";
+    }
+}
+
+.image {
+    grid-area: image;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.features {
+    grid-area: features;
+}
+
+.desc {
+    grid-area: desc;
+
+
+}
+
+.priceCalculator {
+    grid-area: bill;
+}

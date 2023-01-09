@@ -16,8 +16,8 @@ li {
 }
 
 .globalContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 1% 0;
 }

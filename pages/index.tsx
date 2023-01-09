@@ -1,14 +1,18 @@
-import Layout from "../components/Layout"
 import Cards from "../components/Cards"
-import Blog from "../components/Blog"
+import Questinnaire from "../components/Questionnaire"
+import Header from "../components/Header"
+import Blogs from "../components/Blogs"
+
 const index = () => {
   return (
-    <Layout>
+    <>
+      <Header />
       <div className="globalContainer">
         <Cards />
-        <Blog />
+        <Questinnaire />
+        <Blogs />
       </div>
-    </Layout>
+    </>
   )
 }
 
