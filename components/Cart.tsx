@@ -3,10 +3,11 @@ import styles from '../styles/Cart.module.scss'
 import CartContext from '../context/CartContext'
 
 const Cart = () => {
-  const {cartStatus} = useContext(CartContext)
+  const { cartStatus } = useContext(CartContext)
+  console.log(cartStatus)
   return (
     <div className={cartStatus ? `${styles.container}` : `${styles.disabled}`}>
-        Hello world
+      Hello world
     </div>
   )
 }

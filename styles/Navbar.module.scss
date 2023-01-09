@@ -79,7 +79,7 @@ $menuFontSize: xx-large;
                 @include flexCC;
                 position: absolute;
                 flex-direction: column;
-                right: 0px;
+                right: -250px;
                 // overflow: hidden;
                 width: 250px;
                 background-color: yellow;
@@ -89,15 +89,13 @@ $menuFontSize: xx-large;
                     text-transform: uppercase;
                     padding: $paddingY;
                     border-radius: var(--size-1);
-                    // transform: translateX(200px);
                     color: #fff;
-                    // transition: transform 0.3s ease-in-out;
+                    transition: transform 0.3s ease-in-out;
                     // color: green;
                     // width: 100%;
                     text-align: center;
-                }
 
-                
+                }
 
                 li:hover {
                     // border: var(--border-size-1) solid var(--gray-3);
@@ -106,7 +104,6 @@ $menuFontSize: xx-large;
                     width: 180px;
                 }
             }
-
 
             //set delay and animation of each of the dropdown menu items
             .dropdown_ul.activate {
@@ -117,30 +114,9 @@ $menuFontSize: xx-large;
                 li:nth-child(4),
                 li:nth-child(5),
                 li:nth-child(6) {
-                    transform: translateX(-105px);
+                    transform: translateX(-280px);
 
-                    li:nth-of-type(1) {
-                        animation: fade-in 300ms var(--ease-5) forwards;
-                    }
-    
-                    li:nth-of-type(2) {
-                        animation: fade-in 300ms var(--ease-4) forwards;
-                    }
-    
-                    li:nth-of-type(3) {
-                        animation: fade-in 300ms var(--ease-3) forwards;
-                    }
-    
-                    li:nth-of-type(4) {
-                        animation: fade-in 300ms var(--ease-2) forwards;
-                    }
-    
-                    li:nth-of-type(5) {
-                        animation: fade-in 300ms var(--ease-1) forwards;
-                    }
-                    li:nth-of-type(6) {
-                        animation: fade-in 300ms var(--ease-1) forwards;
-                    }
+                    
                     @media (max-width: 768px) {
                         transform: translateX(-5px);
 
@@ -267,8 +243,8 @@ $menuFontSize: xx-large;
     position: relative;
 }
 
-@keyframes fade-in {
-    100% {
-        transform: translateX(-300px);
-    }
-}
+// @keyframes fade-in {
+//     100% {
+//         transform: translateX(-300px);
+//     }
+// }

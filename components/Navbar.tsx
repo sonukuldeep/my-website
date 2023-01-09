@@ -3,23 +3,24 @@ import { FiShoppingBag } from 'react-icons/fi'
 import styles from '../styles/Navbar.module.scss'
 import Link from 'next/link'
 import Cart from './Cart'
-import CartContext, { CartContextProvider } from '../context/CartContext'
+import CartContext from '../context/CartContext'
+import OverlayContext from '../context/OverlayContext'
 
 const Navbar = () => {
-  const [activate, setActivate] = useState('inactive')
+  const {overlayStatus, setOverlayStatus} = useContext(OverlayContext)
+  const { setCartStatus } = useContext(CartContext)
 
   return (
-    <CartContextProvider>
       <nav className={styles.nav}>
-        <div className={activate === 'activate' ? `${styles.overlay} ${styles.activate}` : `${styles.overlay}`}></div>
+        <div className={overlayStatus ? `${styles.overlay} ${styles.activate}` : `${styles.overlay}`}></div>
         <ul className={styles.navbar}>
           <li className={styles.nav_left}>logo</li>
           <li className={styles.nav_right}>
-            <div className={`${styles.menu_title} ${styles.cart}`}><CartIcon />
+            <div className={`${styles.menu_title} ${styles.cart}`}><FiShoppingBag onClick={() => { setCartStatus(pre => !pre) }} />
               <Cart />
             </div>
-            <div className={styles.dropdown} onClick={() => { setActivate(pre => pre === 'activate' ? 'inactive' : 'activate') }}><div className={activate === 'activate' ? `${styles.menu_title} ${styles.activate}` : `${styles.menu_title}`}><HambugerIcon /></div>
-              <ul className={activate === 'activate' ? `${styles.dropdown_ul} ${styles.activate}` : `${styles.dropdown_ul}`}>
+            <div className={styles.dropdown}><div className={overlayStatus ? `${styles.menu_title} ${styles.activate}` : `${styles.menu_title}`}><span onClick={() => { setOverlayStatus(pre => !pre) }}><HambugerIcon /></span></div>
+              <ul onClick={() => { setOverlayStatus(pre => !pre) }} className={overlayStatus ? `${styles.dropdown_ul} ${styles.activate}` : `${styles.dropdown_ul}`}>
                 <li>Account</li>
                 <li>Orders</li>
                 <li>Coupons</li>
@@ -31,7 +32,6 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-    </CartContextProvider>
   )
 }
 
@@ -80,7 +80,7 @@ function HambugerIcon() {
     </svg>)
 }
 
-function CartIcon() {
-  const { setCartStatus } = useContext(CartContext)
-  return (<FiShoppingBag onClick={() => { setCartStatus(pre => !pre) }} />)
-}
+// function CartIcon() {
+  
+//   return ()
+// }

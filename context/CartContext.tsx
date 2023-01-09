@@ -9,7 +9,6 @@ interface ICartContextType {
     setCartStatus: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-// const CartContext = createContext({})
 const CartContext = createContext({} as ICartContextType)
 
 export const CartContextProvider = ({ children }: IChildrenType) => {
