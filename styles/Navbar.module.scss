@@ -56,6 +56,8 @@ $menuFontSize: xx-large;
 
         .menu_title {
             font-size: $menuFontSize;
+            cursor: pointer;
+
         }
 
         .dropdown .menu_title {
@@ -94,7 +96,6 @@ $menuFontSize: xx-large;
                     // color: green;
                     // width: 100%;
                     text-align: center;
-
                 }
 
                 li:hover {
@@ -118,7 +119,7 @@ $menuFontSize: xx-large;
 
                     
                     @media (max-width: 768px) {
-                        transform: translateX(-5px);
+                        transform: translateX(-280px);
 
                     }
                 }
@@ -242,9 +243,3 @@ $menuFontSize: xx-large;
 .cart {
     position: relative;
 }
-
-// @keyframes fade-in {
-//     100% {
-//         transform: translateX(-300px);
-//     }
-// }
