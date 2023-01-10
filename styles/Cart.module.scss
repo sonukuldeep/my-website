@@ -1,10 +1,11 @@
 .container {
     border: 1px solid #333;
+    border-radius: 8px;
     width: 350px;
     height: 400px;
     position: absolute;
     right: 0;
-    background-color: yellow;
+    background-color: #fff;
     z-index: 2;
 }
 

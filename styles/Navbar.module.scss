@@ -49,9 +49,9 @@ $menuFontSize: xx-large;
         .nav_right {
             @include flexCC;
 
-            div:nth-child(1) {
-                padding: $paddingY;
-            }
+            // div:nth-child(1) {
+            //     padding: $paddingY;
+            // }
         }
 
         .menu_title {
