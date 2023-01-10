@@ -1,9 +1,13 @@
+@use './utils';
+
 // This file is common btw cards and card component
 .container {
     h2 {
         text-align: center;
         padding-bottom: 1%;
         color: var(--gray-6);
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
     .cards {
@@ -43,8 +47,14 @@
         box-shadow: 0 0 4px 1px #333;
     }
 
-    h3,
+    h3 {
+        @include utils.h3-font;
+        color: #fff;
+        margin-top: 5px;
+    }
+
     p {
+        @include utils.p-font;
         color: #fff;
         margin: 5px 0;
     }

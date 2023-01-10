@@ -1,18 +1,23 @@
-.container {
+@use 'utils';
 
+.container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     // outline: 1px solid red;
-    grid-template-rows: 250px;
+    grid-template-rows: clamp(250px, 280px , 350px);
     gap: 10px;
     margin: 1% 0;
     justify-items: center;
 
-
+    h3 {
+        @include utils.h3-font;
+        text-transform: uppercase;
+    }
     p {
-        text-align: center;
+        // text-align: center;
+        // font-size: larger;
+        @include utils.p-font;
         color: #fff;
-        font-size: larger;
         margin: 5px 1%;
         padding: 4px;
     }

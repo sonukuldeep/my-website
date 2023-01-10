@@ -1,0 +1,12 @@
+@mixin h3-font {
+	font-size: larger;
+	letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@mixin p-font {
+	font-size: medium;
+	font-weight: 300;
+	text-align: center;
+    letter-spacing: 1px;
+}

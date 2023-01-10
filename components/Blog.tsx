@@ -6,7 +6,7 @@ const Blog = ({ heading, desc, img }: { heading: string, desc: string, img: stri
     return (
         <div className={styles.container}>
             <div className={styles.heading}>
-                <h2>{heading}</h2>
+                <h3>{heading}</h3>
                 <p>{desc}</p>
             </div>
             <img className={styles.img} src={img} alt="image" />
