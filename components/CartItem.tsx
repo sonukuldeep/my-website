@@ -22,7 +22,6 @@ interface ICartItemsType {
 
 const CartItem = ({ item }: IData) => {
     const { cartItems, setCartItems } = useContext(CartContext)
-    console.log(item.logo)
     return (
         (<div className={styles.container}>
             <img className={styles.img} src={item.logo} alt="logo" />

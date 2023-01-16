@@ -3,6 +3,15 @@ import styles from '../styles/Cart.module.scss'
 import CartContext from '../context/CartContext'
 import CartItem from './CartItem'
 
+interface ICartItemsType {
+  id: number;
+  logo: string;
+  heading: string;
+  price: number;
+  excerpt: string;
+  img: string;
+}
+
 const Cart = () => {
   const { cartStatus } = useContext(CartContext)
   const { cartItems } = useContext(CartContext)
@@ -20,9 +29,22 @@ const Cart = () => {
         {cartItems.map(item => <CartItem key={item.id} item={item} />
         )}
       </div>
-      {total === 0 ? "" : <div className={styles.total}>Total <span className={styles.textSmall}>{total}</span>$ <button className={styles.checkoutBtn}>Go to Checkout</button></div>}
+      {total === 0 ? "" : <div className={styles.total}>Total <span className={styles.textSmall}>{total}</span>$ <button onClick={() => checkoutHandler(cartItems)} className={styles.checkoutBtn}>Go to Checkout</button></div>}
     </div>
   )
 }
 
 export default Cart
+
+function checkoutHandler(cartItems: ICartItemsType[]) {
+  const listItems = cartItems.map(item => ({ id: item.id }))
+  fetch('http://localhost:5000/create-checkout', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ items: listItems })
+  })
+  .then(res=>res.json())
+  .then(data=>window.location.assign(data.url))
+}
