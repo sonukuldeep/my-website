@@ -1,10 +1,15 @@
+@use './utils' as *;
+
 .container {
     display: flex;
-    margin: 5px 0;
+    margin: 5px;
+    color: $text-color-1;
+    overflow: hidden;
 }
 
 .container:hover {
-    background-color: rgba(115, 133, 140, 0.674);
+    --bg-color: rgba(115, 133, 140, 0.674);
+    background-color: var(--bg-color);
     color: #fff;
 }
 

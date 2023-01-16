@@ -24,3 +24,7 @@ li {
   align-items: center;
   margin: 1% 0;
 }
+
+button {
+  cursor: pointer;
+}

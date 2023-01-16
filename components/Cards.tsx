@@ -1,7 +1,7 @@
 import style from '../styles/Cards.module.scss'
 import Card from './Card'
 import { data } from './mock_data.js'
-import React from 'react'
+
 const Cards = () => {
     return (
         <div className={style.container}>

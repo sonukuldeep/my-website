@@ -10,3 +10,10 @@
 	text-align: center;
     letter-spacing: 1px;
 }
+
+@mixin color-1 {
+	background-color: rgb(159, 96, 218);
+	color: #fff;
+}
+
+$text-color-1: var(--gray-6);

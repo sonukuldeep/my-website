@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import style from '../styles/Cards.module.scss'
 import CartContext from '../context/CartContext'
-
 
 interface proptype {
   data: {
@@ -26,12 +25,6 @@ interface ICartItemsType {
 const Card = ({ data }: proptype) => {
   const { img, heading, excerpt } = data
   const { cartItems, setCartItems } = useContext(CartContext)
-
-  useEffect(() => {
-    console.log(cartItems)
-
-
-  }, [cartItems])
 
   return (
     <div className={style.card}>
