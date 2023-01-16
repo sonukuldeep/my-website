@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import { FiShoppingBag } from 'react-icons/fi'
 import styles from '../styles/Navbar.module.scss'
 import Link from 'next/link'
@@ -9,6 +9,8 @@ import OverlayContext from '../context/OverlayContext'
 const Navbar = () => {
   const {overlayStatus, setOverlayStatus} = useContext(OverlayContext)
   const { setCartStatus } = useContext(CartContext)
+  const cart = useRef(null)
+  useOutsideAlerter(cart, setCartStatus)
 
   return (
       <nav className={styles.nav}>
@@ -16,7 +18,7 @@ const Navbar = () => {
         <ul className={styles.navbar}>
           <li className={styles.nav_left}>logo</li>
           <li className={styles.nav_right}>
-            <div className={`${styles.menu_title} ${styles.cart}`}><FiShoppingBag onClick={() => { setCartStatus(pre => !pre) }} />
+            <div ref={cart} className={`${styles.menu_title} ${styles.cart}`}><FiShoppingBag  onClick={() => { setCartStatus(pre => !pre) }} />
               <Cart />
             </div>
             <div className={styles.dropdown}><div className={overlayStatus ? `${styles.menu_title} ${styles.activate}` : `${styles.menu_title}`}><span onClick={() => { setOverlayStatus(pre => !pre) }}><HambugerIcon /></span></div>
@@ -80,7 +82,17 @@ function HambugerIcon() {
     </svg>)
 }
 
-// function CartIcon() {
-  
-//   return ()
-// }
+function useOutsideAlerter(ref: React.RefObject<HTMLElement>, setCartStatus: React.Dispatch<React.SetStateAction<boolean>>) {
+  useEffect(() => {
+    // Function for click event
+    function handleOutsideClick(event: MouseEvent) {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setCartStatus(false)
+      }
+    }
+
+    // Adding click event listener
+    document.addEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, [ref]);
+}

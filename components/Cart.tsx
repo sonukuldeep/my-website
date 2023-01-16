@@ -8,10 +8,10 @@ const Cart = () => {
   const { cartItems } = useContext(CartContext)
   const [total, setTotal] = useState(0)
 
-  useEffect(()=>{
-    const total = cartItems.reduce((acc, current)=> acc + current.price, 0)
+  useEffect(() => {
+    const total = cartItems.reduce((acc, current) => acc + current.price, 0)
     setTotal(total)
-  },[cartItems])
+  }, [cartItems])
 
   return (
     <div className={cartStatus ? `${styles.container}` : `${styles.disabled}`}>
@@ -26,4 +26,3 @@ const Cart = () => {
 }
 
 export default Cart
-
