@@ -16,11 +16,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     <OverlayContextProvider>
                         <Navbar />
                     </OverlayContextProvider>
-                </CartContextProvider>
                 <div className={styles.container}>
                     <main>{children}</main>
                 </div>
                 <Footer />
+                </CartContextProvider>
             </DataContextProvider>
         </>
     )

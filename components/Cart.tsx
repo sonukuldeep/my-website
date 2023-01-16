@@ -1,10 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import styles from '../styles/Cart.module.scss'
 import CartContext from '../context/CartContext'
 import CartItem from './CartItem'
 
 const Cart = () => {
   const { cartStatus } = useContext(CartContext)
+  const { cartItems } = useContext(CartContext)
+
 
   const data = [
     {
@@ -18,7 +20,7 @@ const Cart = () => {
       'logo': 'https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-12-04/7a3607e0-3635-11eb-a219-73e9ca8fa2ef.jpg',
       'heading': 'Big website',
       'price': 100
-    
+
     },
     {
       'id': 3,
@@ -31,16 +33,16 @@ const Cart = () => {
       'logo': 'https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-12-04/7a3607e0-3635-11eb-a219-73e9ca8fa2ef.jpg',
       'heading': 'Big website',
       'price': 100
-    
+
     }]
 
   return (
     <div className={cartStatus ? `${styles.container}` : `${styles.disabled}`}>
       <div className={styles.cartContainer}>
-        {data.map(item => <CartItem item={item} />
+        {cartItems.map(item => <CartItem key={item.id} item={item} />
         )}
       </div>
-      
+
     </div>
   )
 }

@@ -7,7 +7,7 @@ const Cards = () => {
         <div className={style.container}>
             <h2>Choose the style you are go for</h2>
             <div className={style.cards}>
-                {data.map((item, index) => (<Card key={index} heading={item.heading} excerpt={item.excerpt} imgLink={item.img} />))}
+                {data.map((item) => (<Card key={item.id} data={item} />))}
             </div>
         </div>
     )
