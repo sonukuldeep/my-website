@@ -1,39 +1,52 @@
-import { useContext, useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { FiShoppingBag } from 'react-icons/fi'
 import styles from '../styles/Navbar.module.scss'
-import Link from 'next/link'
+import { FirebaseApp } from '../Firebase/FirebaseConfig.js'
+import { getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth'
 import Cart from './Cart'
 import CartContext from '../context/CartContext'
 import OverlayContext from '../context/OverlayContext'
+import UserContext from '../context/UserContext'
 
+const auth = getAuth(FirebaseApp);
+const GoogleProvider = new GoogleAuthProvider();
 const Navbar = () => {
-  const {overlayStatus, setOverlayStatus} = useContext(OverlayContext)
+  const { overlayStatus, setOverlayStatus } = useContext(OverlayContext)
   const { setCartStatus } = useContext(CartContext)
   const cart = useRef(null)
+  const { userName } = useContext(UserContext)
+  const [userStatus, setUserStatus] = useState(false)
   useOutsideAlerter(cart, setCartStatus)
 
+  useEffect(() => {
+    if (userName.uid !== null)
+      setUserStatus(true)
+    else
+      setUserStatus(false)
+  }, [userName])
+
   return (
-      <nav className={styles.nav}>
-        <div className={overlayStatus ? `${styles.overlay} ${styles.activate}` : `${styles.overlay}`}></div>
-        <ul className={styles.navbar}>
-          <li className={styles.nav_left}>logo</li>
-          <li className={styles.nav_right}>
-            <div ref={cart} className={`${styles.menu_title} ${styles.cart}`}><FiShoppingBag  onClick={() => { setCartStatus(pre => !pre) }} />
-              <Cart />
-            </div>
-            <div className={styles.dropdown}><div className={overlayStatus ? `${styles.menu_title} ${styles.activate}` : `${styles.menu_title}`}><span onClick={() => { setOverlayStatus(pre => !pre) }}><HambugerIcon /></span></div>
-              <ul onClick={() => { setOverlayStatus(pre => !pre) }} className={overlayStatus ? `${styles.dropdown_ul} ${styles.activate}` : `${styles.dropdown_ul}`}>
-                <li>Account</li>
-                <li>Orders</li>
-                <li>Coupons</li>
-                <li>FAQ</li>
-                <li>Contact</li>
-                <li>Log out</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
+    <nav className={styles.nav}>
+      <div className={overlayStatus ? `${styles.overlay} ${styles.activate}` : `${styles.overlay}`}></div>
+      <ul className={styles.navbar}>
+        <li className={styles.nav_left}>logo</li>
+        <li className={styles.nav_right}>
+          <div ref={cart} className={`${styles.menu_title} ${styles.cart}`}><FiShoppingBag onClick={() => { setCartStatus(pre => !pre) }} />
+            <Cart />
+          </div>
+          <div className={styles.dropdown}><div className={overlayStatus ? `${styles.menu_title} ${styles.activate}` : `${styles.menu_title}`}><span onClick={() => { setOverlayStatus(pre => !pre) }}><HambugerIcon /></span></div>
+            <ul onClick={() => { setOverlayStatus(pre => !pre) }} className={overlayStatus ? `${styles.dropdown_ul} ${styles.activate}` : `${styles.dropdown_ul}`}>
+              <li onClick={signInHandler}>{userStatus ? "Account" : "Log in"}</li>
+              <li>Orders</li>
+              <li>Coupons</li>
+              <li>FAQ</li>
+              <li>Contact</li>
+              {userStatus ? <li onClick={signOutUser}>Log out</li> : ""}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
   )
 }
 
@@ -96,3 +109,22 @@ function useOutsideAlerter(ref: React.RefObject<HTMLElement>, setCartStatus: Rea
     return () => document.removeEventListener("click", handleOutsideClick);
   }, [ref]);
 }
+
+function signInHandler() {
+  signInWithPopup(auth, GoogleProvider)
+    .then(result => {
+      console.log(result.user)
+    })
+}
+
+function signOutUser() {
+  signOut(auth)
+    .then(() => {
+      // Sign-out successful.
+      console.log("sigin out successful");
+    })
+    .catch(error => {
+      // An error happened.
+      console.log("encountered error during sigin out ", error);
+    });
+};
