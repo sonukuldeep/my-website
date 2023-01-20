@@ -1,4 +1,23 @@
 .container {
     background-color: var(--gray-6);
     color: #fff;
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.columns_3 {
+    a {
+        color: white;
+
+    }
+}
+.copyright {
+    width: max-content;
+    margin: 20px auto;
+
 }
