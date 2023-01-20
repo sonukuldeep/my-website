@@ -28,7 +28,9 @@ const Card = ({ data }: proptype) => {
 
   return (
     <div className={style.card}>
-      <img src={img} alt="image" />
+      <div className={style.imageContainer}>
+          <img src={img} alt="image" />
+      </div>
       <h3>{heading}</h3>
       <p>{excerpt}</p>
       <div className={style.btn}>

@@ -39,13 +39,7 @@
     box-shadow: var(--shadow-5);
     height: 400px;
 
-    img {
-        object-fit: contain;
-        width: 60%;
-        margin-top: 10px;
-        border-radius: var(--size-3);
-        box-shadow: 0 0 4px 1px #333;
-    }
+
 
     h3 {
         @include utils.h3-font;
@@ -66,6 +60,30 @@
             margin: 0 10px;
             padding: 5px 10px;
         }
+    }
+}
+
+.imageContainer {
+
+    // background-color: aquamarine;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 40%;
+    margin-top: 10px;
+    border-radius: var(--size-3);
+    box-shadow: 0 0 4px 1px #333;
+
+    img {
+        object-fit: contain;
+        transition: transform 0.25s;
+        transform: scale(1);
+    }
+
+    img:hover {
+        transform: scale(1.1);
     }
 }
 
