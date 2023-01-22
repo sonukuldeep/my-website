@@ -7,6 +7,7 @@ import { DataContextProvider } from '../context/DataContext'
 import { OverlayContextProvider } from '../context/OverlayContext'
 import { CartContextProvider } from '../context/CartContext'
 import { UserContextProvider } from '../context/UserContext'
+import { ProductContextProvider } from '../context/ProductContext'
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -15,13 +16,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <UserContextProvider>
                 <DataContextProvider>
                     <CartContextProvider>
-                        <OverlayContextProvider>
-                            <Navbar />
-                        </OverlayContextProvider>
-                        <div className={styles.container}>
-                            <main>{children}</main>
-                        </div>
-                        <Footer />
+                        <ProductContextProvider>
+                            <OverlayContextProvider>
+                                <Navbar />
+                            </OverlayContextProvider>
+                            <div className={styles.container}>
+                                <main>{children}</main>
+                            </div>
+                            <Footer />
+                        </ProductContextProvider>
                     </CartContextProvider>
                 </DataContextProvider>
             </UserContextProvider>

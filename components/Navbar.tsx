@@ -7,6 +7,7 @@ import Cart from './Cart'
 import CartContext from '../context/CartContext'
 import OverlayContext from '../context/OverlayContext'
 import UserContext from '../context/UserContext'
+import Link from 'next/link'
 
 const auth = getAuth(FirebaseApp);
 const GoogleProvider = new GoogleAuthProvider();
@@ -37,7 +38,7 @@ const Navbar = () => {
           <div className={styles.dropdown}><div className={overlayStatus ? `${styles.menu_title} ${styles.activate}` : `${styles.menu_title}`}><span onClick={() => { setOverlayStatus(pre => !pre) }}><HambugerIcon /></span></div>
             <ul onClick={() => { setOverlayStatus(pre => !pre) }} className={overlayStatus ? `${styles.dropdown_ul} ${styles.activate}` : `${styles.dropdown_ul}`}>
               <li onClick={signInHandler}>{userStatus ? "Account" : "Log in"}</li>
-              <li>Orders</li>
+              <li><Link href='/orders'>Orders</Link></li>
               <li>Coupons</li>
               <li>FAQ</li>
               <li>Contact</li>
