@@ -3,6 +3,11 @@
 	letter-spacing: 2px;
     text-transform: uppercase;
 }
+@mixin h3-font-capitalize {
+	font-size: larger;
+	letter-spacing: 2px;
+    text-transform: capitalize !important;
+}
 
 @mixin p-font {
 	font-size: medium;

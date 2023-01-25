@@ -11,11 +11,11 @@ const Questionnaire = () => {
 
     return (
         <div className={styles.container}>
-            <h2>Let me help you choose the right website</h2>
+            <h2>Please take a moment to answer these simple question</h2>
             <div>
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor="website-type">What kind of website you want?</label>
+                        <label htmlFor="website-type">What kind of website do you want?</label>
                         <div className={styles.select_wrapper}>
                             <select id="website-type">
                                 <option value="">Please choose an option</option>
@@ -25,25 +25,17 @@ const Questionnaire = () => {
                             </select>
                         </div>
                     </div>
-                    <div>
-                        <label htmlFor="website-update">Will the website need constant updation?</label>
-                        <div className={styles.select_wrapper}>
-                            <select id="website-update">
-                                <option value="">Please choose an option</option>
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
-                            </select>
-                        </div>
+                    <div className={styles.inputField}>
+                        <label htmlFor="maintain">Who is the target audience</label>
+                        <input type="text" required placeholder='Age group/Profession/Exposure'/>
                     </div>
-                    <div>
-                        <label htmlFor="maintain">Do you want to maintain it yourself?</label>
-                        <div className={styles.select_wrapper}>
-                            <select id="maintain">
-                                <option value="">Please choose an option</option>
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
-                            </select>
-                        </div>
+                    <div className={styles.inputField}>
+                        <label htmlFor="maintain">Desired look and feel</label>
+                        <input type="text" required placeholder='Any website you are inspired of'/>
+                    </div>
+                    <div className={styles.inputField}>
+                        <label htmlFor="maintain">Any special functionality</label>
+                        <input type="text" required placeholder='Newsletter submission/User Database'/>
                     </div>
                     <button type="submit">Submit</button>
                 </form>
