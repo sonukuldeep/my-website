@@ -107,6 +107,9 @@
 }
 
 .tooltipHover {
+    position: absolute;
+    left: -5px;
+    top: 120%;
     visibility: hidden;
     width: max-content;
     background-color: #fff;

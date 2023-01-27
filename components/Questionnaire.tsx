@@ -39,7 +39,7 @@ const Questionnaire = () => {
                         <label htmlFor="maintain">Any special functionality</label>
                         <input type="text" name='requests' required placeholder='Newsletter submission/User Database'/>
                     </div>
-                    <button type="submit">Submit<span className={styles.tooltipHover}>Make sure you are loogged in</span></button>
+                    <button type="submit">Submit<span className={styles.tooltipHover}>Make sure you are logged in</span></button>
                 </form>
             </div>
         </div>
