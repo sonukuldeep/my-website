@@ -23,7 +23,7 @@ const DetailedBlog = () => {
                 <DetailedBlogDescUtility />
             </div>
             {/* Price calculator */}
-            <div className={styles.priceCalculator}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe harum enim tempora reprehenderit voluptatibus. Explicabo culpa quas dolor asperiores tenetur beatae repellat perspiciatis doloremque modi, amet iusto, nobis natus fugit?</div>
+            <div className={styles.priceCalculator}>Hello world</div>
         </div>
     )
 }
