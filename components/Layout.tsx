@@ -20,7 +20,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                             <OverlayContextProvider>
                                 <Navbar />
                             </OverlayContextProvider>
-                            <div className={styles.container}>
+                            <div>
+                                {/* <div className={styles.container}> */}
                                 <main>{children}</main>
                             </div>
                             <Footer />
