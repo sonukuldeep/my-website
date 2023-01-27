@@ -4,20 +4,25 @@ import Header from "../components/Header"
 import Blogs from "../components/Blogs"
 import Slider from "../components/Slider"
 import PageDivider from "../components/PageDivider"
+import Contacts from "../components/Contacts"
 
 const index = () => {
   return (
     <>
       <Header />
       <Slider />
-      <div className="globalContainer">
+      {/* <div className="globalContainer"> */}
         <PageDivider>
           Services
         </PageDivider>
         <Cards />
-        <Questinnaire />
+        <PageDivider>
+          Contact me
+        </PageDivider>
+        <Contacts/>
+        {/* <Questinnaire /> */}
         <Blogs />
-      </div>
+      {/* </div> */}
     </>
   )
 }
