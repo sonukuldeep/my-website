@@ -3,8 +3,42 @@
 .container {
     background-image: url('/assets/images/noise.svg');
     background-position: center right;
-    height: 300px;
-    background-size: contain;
+    background-size: cover center;
+    padding: 20px 0;
     display: block;
     background-color: pink;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 6px;
+    color: var(--gray-6);
+
+    h2 {
+        grid-column: 1/ span 2;
+    }
+}
+.form {
+    display: flex;
+}
+.inputfield {
+ margin: 6px;
+}
+.btn {
+    padding: 5px 10px;
+    color: var(--gray-6);
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+}
+.whatsapp {
+    // position: absolute;
+    // top: 0;
+    
+    max-width: 40px;
+    img {
+        width: 100%;
+    }
 }

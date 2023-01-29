@@ -1,41 +1,52 @@
 import styles from '../styles/Contacts.module.scss'
+import React, { useRef } from 'react'
 
 const Contacts = () => {
-  const handleSubmit = e => {
-    e.preventDefault();
-    const form = e.target;
-    console.log('email', form.email, form.elements.email);
-    console.log('name', form.name, form.elements.name);
-  }
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    console.log('email', form.email.value);
+    console.log('name', form.fullname.value);
+    console.log('name', form.msg.value);
+  };
   return (
     <div className={styles.container}>
-      <h2>Contact me</h2>
-      <p>Get in touch</p>
-      <form onSubmit={handleSubmit}>
+      <h2>Shoot me a message and I'll contact you</h2>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Full Name</label>
-          <input
-            id="name"
-            name="name"
-          />
+          <div className={styles.inputfield}>
+            <input
+              id="email"
+              name="email"
+              required
+              placeholder=' Email'
+            />
+          </div>
+          <div className={styles.inputfield}>
+            <input
+              id="fullname"
+              name="fullname"
+              required
+              placeholder=' Name'
+            />
+          </div>
+          <div className={styles.inputfield}>
+            <textarea
+              id="msg"
+              name="msg"
+              required
+              rows={4}
+              cols={18}
+              placeholder=' Whats your website about?'
+            />
+          </div>
         </div>
-        <div>
-          <label htmlFor="email">Email address</label>
-          <input
-            id="email"
-            name="email"
-          />
-        </div>
-        <div>
-          <label htmlFor="msg">Message</label>
-          <textarea
-            id="msg"
-            name="msg"
-          />
-        </div>
-        <button type="submit">Submit</button>
+        <button className={styles.btn} type="submit">Submit</button>
       </form>
+      <div className={styles.whatsapp}>
+        <img src="assets/images/whatsapp.png" alt="" />
+      </div>
     </div>
   )
 }
