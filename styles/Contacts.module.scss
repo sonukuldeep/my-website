@@ -20,11 +20,9 @@
         grid-column: 1/ span 2;
     }
 }
-.form {
-    display: flex;
-}
 .inputfield {
  margin: 6px;
+ max-width: 300px;
 }
 .btn {
     padding: 5px 10px;
@@ -37,8 +35,11 @@
     // position: absolute;
     // top: 0;
     
-    max-width: 40px;
+    max-width: 200px;
     img {
         width: 100%;
     }
+}
+.whatsapp:hover {
+    cursor: pointer;
 }
