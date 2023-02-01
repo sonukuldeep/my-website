@@ -30,7 +30,7 @@ const Navbar = () => {
     <nav className={styles.nav}>
       <div className={overlayStatus ? `${styles.overlay} ${styles.activate}` : `${styles.overlay}`}></div>
       <ul className={styles.navbar}>
-        <li className={styles.nav_left}>logo</li>
+        <li className={`${styles.nav_left} ${styles.logo}`}><Link href='/'><img src="assets/images/Logo.svg" alt="logo" /></Link></li>
         <li className={styles.nav_right}>
           <div ref={cart} className={`${styles.menu_title} ${styles.cart}`}><FiShoppingBag onClick={() => { setCartStatus(pre => !pre) }} />
             <Cart />

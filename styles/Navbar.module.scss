@@ -243,3 +243,13 @@ $menuFontSize: xx-large;
 .cart {
     position: relative;
 }
+
+.logo {
+    width: 180px;
+    margin: 5px;
+    img {
+        cursor: pointer;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
