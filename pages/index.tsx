@@ -11,18 +11,10 @@ const index = () => {
     <>
       <Header />
       <Slider />
-      {/* <div className="globalContainer"> */}
-        <PageDivider>
-          Services
-        </PageDivider>
-        <Cards />
-        <PageDivider>
-          Contact me
-        </PageDivider>
-        <Contacts/>
-        {/* <Questinnaire /> */}
-        <Blogs />
-      {/* </div> */}
+      <Cards />
+      <Contacts />
+      <Blogs />
+
     </>
   )
 }
