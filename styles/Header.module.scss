@@ -11,18 +11,19 @@ $paddingX: 0 10px;
     justify-content: center;
     align-items: flex-start;
 
-    background-color: #fbfcff;
+    // background-color: #fbfcff;
     .hero {
-        z-index: 1;
+        z-index: -1;
         background: url('../public/assets/images/hero.jpg');
         // background: url('../components/assets/images/hero_img.jpg');
-        object-fit: cover;
+        // object-fit: cover;
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center right;
+        background-size: cover;
+        background-position: center;
         position: absolute;
         width: 100%;
         height: 100%;
+        position: absolute;
     }
 
     h1 {

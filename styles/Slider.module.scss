@@ -14,14 +14,15 @@
 
 .slide {
   width: 300px;
-  height: 300px;
   margin: 2px;
-
+  // background-color: aqua;
+  overflow: hidden;
 }
 
 .img {
   width: 100%;
-  object-fit: contain;
+  // height: 100%;
+  object-fit: cover;
 
 }
 

@@ -1,6 +1,9 @@
+@use 'utils';
+
 .container {
-    background-color:  rgb(159, 96, 218);
-    box-shadow: 0 0 10px 4px #333;
-    border: 1px solid #333;
+    // background-color:  rgb(159, 96, 218);
+    background: utils.$text-color-2;
+    box-shadow: 0 1px 8px 1px #333;
+    border: 1px solid var(--stone-2);
     border-radius: 8px;
 }

@@ -16,7 +16,7 @@ const Meta = ({ title, keywords, description }: MetaValidation) => {
 }
 
 Meta.defaultProps = {
-  title: 'Eastern dev',
+  title: 'Eastern web dev',
   keywords: 'web development, website builder',
   description: 'Get your own website up with us',
 }
