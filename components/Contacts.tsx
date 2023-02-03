@@ -45,7 +45,7 @@ const Contacts = () => {
         </div>
         <div className={styles.btn_container}>
           <button className={styles.btn} type="submit">Submit</button>
-            <a className={styles.whatsapp} href={process.env.NEXT_PUBLIC_WHATSAPP} target="_blank" rel="noopener noreferrer">{whatsapp}Chat on WhatsApp</a>
+          <button className={styles.whatsapp} onClick={openNewTab}>{whatsapp}Chat on WhatsApp</button>
         </div>
       </form>
     </div>
@@ -53,3 +53,8 @@ const Contacts = () => {
 }
 
 export default Contacts
+
+function openNewTab() {
+  const url = process.env.NEXT_PUBLIC_WHATSAPP
+  window.open(url, '_blank', 'noreferrer');
+};

@@ -1,3 +1,5 @@
+@use 'utils';
+
 @mixin flexCC {
     display: flex;
     justify-content: space-between;
@@ -62,15 +64,16 @@ $menuFontSize: xx-large;
 
         .dropdown .menu_title {
             transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+            
         }
-
+        
         .dropdown .menu_title.activate {
             transform: translateX(-90vw);
-
+            
             @media (max-width: 768px) {
                 transform: translateX(-85vw);
             }
-
+            
             color: #fff;
         }
 
@@ -166,7 +169,8 @@ $menuFontSize: xx-large;
                     width 500ms ease-in-out;
 
                 path {
-                    stroke: #333;
+                    stroke: utils.$text-color-2;
+                    // stroke: #333;
                 }
             }
 
