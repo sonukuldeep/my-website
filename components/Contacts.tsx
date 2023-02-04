@@ -15,7 +15,7 @@ const Contacts = () => {
   };
   return (
     <div className={styles.container}>
-      <h2>Shoot me a message and I'll contact you</h2>
+      <h2>Shoot me a message and I&apos;ll contact you</h2>
       <form onSubmit={handleSubmit}>
         <div className={styles.inputfield}>
           <input

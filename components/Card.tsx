@@ -34,7 +34,7 @@ const Card = ({ data }: proptype) => {
       <h3>{heading}</h3>
       <p>{excerpt}</p>
       <div className={style.btn}>
-        <button>Demo</button>
+        <button>Explore</button>
         <button onClick={() => pupulateCartItems(setCartItems, cartItems, data)}>Buy</button>
       </div>
     </div>
