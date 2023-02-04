@@ -5,7 +5,10 @@ const Header = () => {
         <header className={styles.header}>
             <div className={`${styles.hero} ${full_width_style.full_width}`}></div>
             <h1>Order your dream website now!</h1>
-            <button className={styles.btn}>Explore</button>
+            <div className={styles.hero_btns}>
+                <button className={styles.btn}>Explore</button>
+                <button className={styles.btn}>Order on Upwork</button>
+            </div>
         </header>
     )
 }

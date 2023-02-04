@@ -37,7 +37,7 @@ $paddingX: 0 10px;
     }
 
     .btn {
-        margin-left: 10%;
+        // margin-left: 10%;
         color: var(--gray-6);
         font-weight: var(--font-weight-9);
         font-size: var(--font-size-2);
@@ -46,8 +46,14 @@ $paddingX: 0 10px;
     }
 
     .btn:hover {
-        animation: var(--animation-shake-x) forwards;
+        // animation: var(--animation-shake-x) forwards;
         // animation-timing-function: var(--ease-squish-3);
-        animation-duration: 300ms;
+        // animation-duration: 300ms;
     }
+}
+
+.hero_btns {
+    margin-left: 10%;
+    display: flex;
+    gap: 5px;
 }

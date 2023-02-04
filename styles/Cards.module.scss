@@ -12,7 +12,7 @@
 
     .cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(3, minmax(300px, 400px));
         gap: 10px;
 
     }
@@ -53,7 +53,8 @@
     p {
         @include utils.p-font;
         color: #fff;
-        margin: 5px 0;
+        margin: 5px 40px;
+        // background-color: aqua;
     }
 
     .btn {
@@ -70,9 +71,9 @@
 
     // background-color: aquamarine;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     width: 60%;
     height: 40%;
     margin-top: 10px;
@@ -80,7 +81,10 @@
     box-shadow: 0 0 4px 1px #333;
 
     img {
-        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
         transition: transform 0.25s;
         transform: scale(1);
     }
@@ -90,17 +94,17 @@
     }
 }
 
-.card:nth-of-type(1) {
+.card:nth-of-type(1),.card:nth-of-type(6) {
     border-radius: var(--radius-blob-1);
 
 }
 
-.card:nth-of-type(2) {
+.card:nth-of-type(2),.card:nth-of-type(4) {
     border-radius: var(--radius-blob-2);
 
 }
 
-.card:nth-of-type(3) {
+.card:nth-of-type(3),.card:nth-of-type(5) {
     border-radius: var(--radius-blob-3);
 
 }
