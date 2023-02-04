@@ -13,7 +13,7 @@ const auth = getAuth(FirebaseApp);
 const GoogleProvider = new GoogleAuthProvider();
 const Navbar = () => {
   const { overlayStatus, setOverlayStatus } = useContext(OverlayContext)
-  const { setCartStatus } = useContext(CartContext)
+  const { setCartStatus, cartItems } = useContext(CartContext)
   const cart = useRef(null)
   const { userName } = useContext(UserContext)
   const [userStatus, setUserStatus] = useState(false)
@@ -30,9 +30,10 @@ const Navbar = () => {
     <nav className={styles.nav}>
       <div className={overlayStatus ? `${styles.overlay} ${styles.activate}` : `${styles.overlay}`}></div>
       <ul className={styles.navbar}>
-        <li className={`${styles.nav_left} ${styles.logo}`}><Link href='/'><img src="assets/images/Logo.svg" alt="logo" /></Link></li>
+        <li className={`${styles.nav_left} ${styles.logo}`}><Link href='/'><img src="/assets/images/Logo.svg" alt="logo" /></Link></li>
         <li className={styles.nav_right}>
-          <div ref={cart} className={`${styles.menu_title} ${styles.cart}`}><FiShoppingBag style={{color: '#fff'}} onClick={() => { setCartStatus(pre => !pre) }} />
+          <div data-cartSize={cartItems.length === 0 ? '' : cartItems.length} ref={cart} className={`${styles.menu_title} ${styles.cart} ${styles.item_count}`}>
+            <FiShoppingBag style={{ color: '#fff' }} onClick={() => { setCartStatus(pre => !pre) }} />
             <Cart />
           </div>
           <div className={styles.dropdown}><div className={overlayStatus ? `${styles.menu_title} ${styles.activate}` : `${styles.menu_title}`}><span onClick={() => { setOverlayStatus(pre => !pre) }}><HambugerIcon /></span></div>

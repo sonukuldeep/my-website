@@ -64,16 +64,16 @@ $menuFontSize: xx-large;
 
         .dropdown .menu_title {
             transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
-            
+
         }
-        
+
         .dropdown .menu_title.activate {
             transform: translateX(-90vw);
-            
+
             @media (max-width: 768px) {
                 transform: translateX(-85vw);
             }
-            
+
             color: #fff;
         }
 
@@ -120,7 +120,7 @@ $menuFontSize: xx-large;
                 li:nth-child(6) {
                     transform: translateX(-280px);
 
-                    
+
                     @media (max-width: 768px) {
                         transform: translateX(-280px);
 
@@ -251,9 +251,26 @@ $menuFontSize: xx-large;
 .logo {
     width: 180px;
     margin: 5px;
+
     img {
         cursor: pointer;
         max-width: 100%;
         object-fit: cover;
     }
+}
+
+.item_count {
+    position: relative;
+}
+
+.item_count::before {
+    content: attr(data-cartSize);
+    font-size: medium;
+    color: #fff;
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    right: -10px;
 }
