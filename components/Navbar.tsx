@@ -32,7 +32,7 @@ const Navbar = () => {
       <ul className={styles.navbar}>
         <li className={`${styles.nav_left} ${styles.logo}`}><Link href='/'><img src="/assets/images/Logo.svg" alt="logo" /></Link></li>
         <li className={styles.nav_right}>
-          <div data-cartSize={cartItems.length === 0 ? '' : cartItems.length} ref={cart} className={`${styles.menu_title} ${styles.cart} ${styles.item_count}`}>
+          <div data-cartsize={cartItems.length === 0 ? '' : cartItems.length} ref={cart} className={`${styles.menu_title} ${styles.cart} ${styles.item_count}`}>
             <FiShoppingBag style={{ color: '#fff' }} onClick={() => { setCartStatus(pre => !pre) }} />
             <Cart />
           </div>

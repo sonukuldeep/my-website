@@ -264,7 +264,7 @@ $menuFontSize: xx-large;
 }
 
 .item_count::before {
-    content: attr(data-cartSize);
+    content: attr(data-cartsize);
     font-size: medium;
     color: #fff;
     position: absolute;
