@@ -11,15 +11,15 @@ exports.handler = async (event, context) => {
         // 5: process.env.CLONE_ID,
         // 6: process.env.DESIGN_ID,
     };
-    const { items } = JSON.parse(event.body)
+    // const { items } = JSON.parse(event.body)
     const lineItems = [];
-    items.forEach(item => {
+    // items.forEach(item => {
         lineItems.push({
             // price: product[item.id],
             price: product[1],
             quantity: 1,
         });
-    });
+    // });
 
     stripe.checkout.sessions
         .create({
