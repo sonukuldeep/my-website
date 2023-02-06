@@ -47,5 +47,7 @@ function checkoutHandler(cartItems: ICartItemsType[]) {
     body: JSON.stringify({ items: listItems })
   })
     .then(res => res.json())
-    .then(data => window.location.assign(data.url))
+    .then(data => {
+      console.log(data)
+      window.location.assign(data.url)})
 }
