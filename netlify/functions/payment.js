@@ -12,53 +12,52 @@ exports.handler = async (event, context) => {
         // 6: process.env.DESIGN_ID,
     };
     // const { items } = JSON.parse(event.body)
-    // const lineItems = [];
-    //     lineItems.push({
-            // price: product[item.id],
-        //     price: product[1],
-        //     quantity: 1,
-        // });
-    // });
+    const lineItems = [{
+        // price: product[item.id],
+        price: product[1],
+        quantity: 1,
+    }]
 
-    // stripe.checkout.sessions
-    //     .create({
-    //         line_items: lineItems,
-    //         mode: "payment",
-    //         success_url: `${DOMAIN}/success`,
-    //         cancel_url: `${DOMAIN}/cancel`,
-    //     })
-    //     .then(session => {
-    //         res.status(200).send(JSON.stringify({ url: session.url }));
 
-    //     })
-    //     .catch(err => {
-    //         console.error(err);
-    //         res.status(500).send(err);
-    //     });
+    stripe.checkout.sessions
+        .create({
+            line_items: lineItems,
+            mode: "payment",
+            success_url: `${DOMAIN}/success`,
+            cancel_url: `${DOMAIN}/cancel`,
+        })
+        .then(session => {
+            res.status(200).send(JSON.stringify({ url: session.url }));
 
-    try {
-        // const { items } = JSON.parse(event.body)
-        const greeting = {greeting: `Hello ${product[1]}, `}
-        return {
-            statusCode: 200,
-            headers: {
-                "Access-Control-Allow_Origin": "*",
-                "Access-Control-Allow_Headers": "Authorization, Content-Type",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(greeting)
-        }
-    } catch (error) {
-        console.log("error occured ", error)
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).send(err);
+        });
 
-        return {
-            statusCode: 400,
-            headers: {
-                "Access-Control-Allow_Origin": "*",
-                "Access-Control-Allow_Headers": "Authorization, Content-Type"
-            },
-            body: JSON.stringify(error)
-        }
-    }
+    // try {
+    //     // const { items } = JSON.parse(event.body)
+    //     const greeting = {greeting: `Hello ${product[1]}, `}
+    //     return {
+    //         statusCode: 200,
+    //         headers: {
+    //             "Access-Control-Allow_Origin": "*",
+    //             "Access-Control-Allow_Headers": "Authorization, Content-Type",
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(greeting)
+    //     }
+    // } catch (error) {
+    //     console.log("error occured ", error)
+
+    //     return {
+    //         statusCode: 400,
+    //         headers: {
+    //             "Access-Control-Allow_Origin": "*",
+    //             "Access-Control-Allow_Headers": "Authorization, Content-Type"
+    //         },
+    //         body: JSON.stringify(error)
+    //     }
+    // }
 
 }
