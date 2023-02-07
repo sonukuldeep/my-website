@@ -4,7 +4,6 @@ import styles from '../styles/Layout.module.scss'
 import Footer from './Footer'
 import React from 'react'
 import { Elements } from "@stripe/react-stripe-js"
-import  stripePromise  from '../stripe/stripe.utils'
 import { DataContextProvider } from '../context/DataContext'
 import { OverlayContextProvider } from '../context/OverlayContext'
 import { CartContextProvider } from '../context/CartContext'
