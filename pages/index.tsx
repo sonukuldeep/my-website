@@ -3,7 +3,6 @@ import Questinnaire from "../components/Questionnaire"
 import Header from "../components/Header"
 import Blogs from "../components/Blogs"
 import Slider from "../components/Slider"
-import PageDivider from "../components/PageDivider"
 import Contacts from "../components/Contacts"
 
 const index = () => {
