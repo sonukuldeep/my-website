@@ -12,6 +12,7 @@ const product = {
 
 exports.handler = async (event) => {
     try {
+        console.log("this is log")
         const lineItems = [{
             price: product[1],
             quantity: 1,
