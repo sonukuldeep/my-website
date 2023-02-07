@@ -13,7 +13,6 @@ import { ProductContextProvider } from '../context/ProductContext'
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
-            {/* <Elements stripe={()=>stripePromise()}> */}
                 <Meta />
                 <UserContextProvider>
                     <DataContextProvider>
@@ -23,7 +22,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                                     <Navbar />
                                 </OverlayContextProvider>
                                 <div>
-                                    {/* <div className={styles.container}> */}
                                     <main>{children}</main>
                                 </div>
                                 <Footer />
@@ -31,7 +29,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                         </CartContextProvider>
                     </DataContextProvider>
                 </UserContextProvider>
-            {/* </Elements> */}
         </>
     )
 }

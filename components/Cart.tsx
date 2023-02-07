@@ -44,7 +44,8 @@ function checkoutHandler(cartItems: ICartItemsType[]) {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ items: listItems })
+    body: JSON.stringify({})
+    // body: JSON.stringify({ items: listItems })
   })
     .then(res => res.json())
     .then(data => {
