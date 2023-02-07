@@ -1,7 +1,7 @@
 require("dotenv").config();
 
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-const DOMAIN = "https://mywebsite0001.netlify.app"
+// const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+// const DOMAIN = "https://mywebsite0001.netlify.app"
 
 //products info -- product id is linked to pricing etc
 const product = {
@@ -24,16 +24,17 @@ exports.handler = async (event) => {
         //     });
         // });
 
-        const session = await stripe.checkout.sessions.create({
-            line_items: lineItems,
-            mode: 'payment',
-            success_url: `${DOMAIN}/success`,
-            cancel_url: `${DOMAIN}/cancel`,
-        });
+        // const session = await stripe.checkout.sessions.create({
+        //     line_items: lineItems,
+        //     mode: 'payment',
+        //     success_url: `${DOMAIN}/success`,
+        //     cancel_url: `${DOMAIN}/cancel`,
+        // });
 
         return {
             statusCode: 200,
-            body: JSON.stringify({ url: session.url })
+            body: JSON.stringify({ url: "hello world" })
+            // body: JSON.stringify({ url: session.url })
         }
     } catch (error) {
         return {
