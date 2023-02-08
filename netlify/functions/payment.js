@@ -14,7 +14,7 @@ exports.handler = async (event) => {
     try {
         console.log("this is log")
         const lineItems = [{
-            price: product[1],
+            price: 'price_1MQr2ZSBGD3BBl5hkyWx18gD',
             quantity: 1,
         }];
         // const items = req.body.items;
@@ -40,7 +40,7 @@ exports.handler = async (event) => {
         console.log({error})
         return {
             statusCode: 400,
-            body: JSON.stringify( process.env.STRIPE_SECRET_KEY.slice(0,5) )
+            body: JSON.stringify( error )
         }
 
     }
