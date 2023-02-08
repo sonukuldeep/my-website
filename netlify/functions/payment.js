@@ -3,7 +3,6 @@ require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const domain = process.env.DOMAIN
 
-//products info -- product id is linked to pricing etc
 const product = {
     1: process.env.ECOMMERCE_ID,
     2: process.env.BLOG_ID,
@@ -33,24 +32,12 @@ exports.handler = async (event) => {
 
         return {
             statusCode: 200,
-            headers: {
-                "Access-Control-Allow_Origin": domain,
-                "Access-Control-Allow_Headers": "Authorization, Content-Type",
-                "Content-Type": "application/json"
-            },
             body: JSON.stringify({ url: session.url })
         }
     } catch (error) {
-        console.log({error})
         return {
             statusCode: 400,
-            headers: {
-                "Access-Control-Allow_Origin": domain,
-                "Access-Control-Allow_Headers": "Authorization, Content-Type",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify( error )
+            body: JSON.stringify(error)
         }
-
     }
 }
