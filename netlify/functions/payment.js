@@ -5,16 +5,14 @@ const DOMAIN = "https://mywebsite0001.netlify.app"
 
 //products info -- product id is linked to pricing etc
 const product = {
-    1: process.env.SHOPIFY_ID,
-    2: process.env.BLOG_ID,
-    3: process.env.ADVERTISEMENT_ID,
+    1: process.env.ECOMMERCE_ID
 };
 
 exports.handler = async (event) => {
     try {
         console.log("this is log")
         const lineItems = [{
-            price: 'price_1MQr2ZSBGD3BBl5hkyWx18gD',
+            price: product[1],
             quantity: 1,
         }];
         // const items = req.body.items;
