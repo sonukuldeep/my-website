@@ -15,8 +15,8 @@ const product = {
 
 exports.handler = async (event) => {
     try {
-        const lineItems = [];
-        const { items } = req.body
+        const lineItems = []
+        const { items } = JSON.parse(event.body)
         items.forEach(item => {
             lineItems.push({
                 price: product[item.id],
