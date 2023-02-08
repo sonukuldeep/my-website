@@ -40,7 +40,7 @@ exports.handler = async (event) => {
         console.log({error})
         return {
             statusCode: 400,
-            body: JSON.stringify( error )
+            body: JSON.stringify( process.env.STRIPE_SECRET_KEY.slice(0,5) )
         }
 
     }
