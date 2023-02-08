@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-const DOMAIN = "https://mywebsite0001.netlify.app"
+const domain = process.env.DOMAIN
 
 //products info -- product id is linked to pricing etc
 const product = {
@@ -27,18 +27,28 @@ exports.handler = async (event) => {
         const session = await stripe.checkout.sessions.create({
             line_items: lineItems,
             mode: 'payment',
-            success_url: `${DOMAIN}/success`,
-            cancel_url: `${DOMAIN}/cancel`,
+            success_url: `${domain}/success`,
+            cancel_url: `${domain}/cancel`,
         });
 
         return {
             statusCode: 200,
+            headers: {
+                "Access-Control-Allow_Origin": domain,
+                "Access-Control-Allow_Headers": "Authorization, Content-Type",
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify({ url: session.url })
         }
     } catch (error) {
         console.log({error})
         return {
             statusCode: 400,
+            headers: {
+                "Access-Control-Allow_Origin": domain,
+                "Access-Control-Allow_Headers": "Authorization, Content-Type",
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify( error )
         }
 
