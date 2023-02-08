@@ -15,17 +15,14 @@ const product = {
 
 exports.handler = async (event) => {
     try {
-        const lineItems = [{
-            price: product[1],
-            quantity: 1,
-        }];
-        // const items = req.body.items;
-        // items.forEach(item => {
-        //     lineItems.push({
-        //         price: product[item.id],
-        //         quantity: 1,
-        //     });
-        // });
+        const lineItems = [];
+        const { items } = req.body
+        items.forEach(item => {
+            lineItems.push({
+                price: product[item.id],
+                quantity: 1,
+            });
+        });
 
         const session = await stripe.checkout.sessions.create({
             line_items: lineItems,
