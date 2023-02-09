@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styles from '../styles/Success.module.scss'
-import Confetti from 'react-confetti'
+import dynamic from 'next/dynamic'
+
+const Confetti = dynamic(() => import('react-confetti'), {
+  ssr: false,
+})
 
 const success = () => {
   const [height, setHeight] = useState<number | undefined>(undefined)
@@ -14,6 +18,7 @@ const success = () => {
         setHeight(confetiRef.current.clientHeight);
       }
     };
+
 
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
@@ -38,6 +43,10 @@ function ConfettiToast({ width, height }: { width: number | undefined, height: n
     <Confetti
       width={width}
       height={height}
+      recycle={false}
+      numberOfPieces={2000}
+      tweenDuration={80000}
+      gravity={0.02}
     />
   )
 }
