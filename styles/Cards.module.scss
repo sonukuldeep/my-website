@@ -1,6 +1,6 @@
-@use './utils';
 
-// This file is common btw cards and card component
+
+
 .container {
     h2 {
         text-align: center;
@@ -9,102 +9,22 @@
         text-transform: uppercase;
         letter-spacing: 1px;
     }
+}
 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 400px));
+    gap: 10px;
+
+}
+
+@media (max-width: 768px) {
     .cards {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(300px, 400px));
-        gap: 10px;
-
-    }
-
-    @media (max-width: 768px) {
-        .cards {
-            gap: 25px;
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
-            // align-items: center;
-        }
-    }
-
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // background: var(--gradient-7);
-    // background: rgb(159, 96, 218);
-    background: utils.$text-color-2;
-    // box-shadow: var(--shadow-3);
-    box-shadow: 0 1px 8px 1px #333;
-    border: 1px solid var(--stone-2);
-    height: 400px;
-
-
-
-    h3 {
-        @include utils.h3-font;
-        color: #fff;
-        margin-top: 5px;
-    }
-
-    p {
-        @include utils.p-font;
-        color: #fff;
-        margin: 5px 40px;
-        // background-color: aqua;
-    }
-
-    .btn {
-        margin: 5px;
-
-        button {
-            margin: 0 10px;
-            padding: 5px 10px;
-        }
+        gap: 25px;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
     }
 }
 
-.imageContainer {
-
-    // background-color: aquamarine;
-    overflow: hidden;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    width: 60%;
-    height: 40%;
-    margin-top: 10px;
-    border-radius: var(--size-3);
-    box-shadow: 0 0 4px 1px #333;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-        transition: transform 0.25s;
-        transform: scale(1);
-    }
-
-    img:hover {
-        transform: scale(1.1);
-    }
-}
-
-.card:nth-of-type(1),.card:nth-of-type(6) {
-    border-radius: var(--radius-blob-1);
-
-}
-
-.card:nth-of-type(2),.card:nth-of-type(4) {
-    border-radius: var(--radius-blob-2);
-
-}
-
-.card:nth-of-type(3),.card:nth-of-type(5) {
-    border-radius: var(--radius-blob-3);
-
-}

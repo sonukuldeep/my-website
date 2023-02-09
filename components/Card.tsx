@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import style from '../styles/Cards.module.scss'
+import style from '../styles/Card.module.scss'
 import CartContext from '../context/CartContext'
 import { useRouter } from 'next/router';
 
