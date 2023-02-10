@@ -1,6 +1,16 @@
+@use './utils' as *;
+
 .container {
     min-height: calc(100vh - 196px);
     padding: 100px;
+
+    h2 {
+        // --bg: green;
+        // $bg: var(--stone-2);
+        color: invert($color: $bg);
+        text-align: center;
+    }
 }
+
 
 
