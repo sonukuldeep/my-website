@@ -39,7 +39,7 @@ export default Cart
 function checkoutHandler(cartItems: ICartItemsType[]) {
   const listItems = cartItems.map(item => ({ id: item.id }))
   // fetch('http://localhost:5000/create-checkout', {
-  fetch('https://mywebsite0001.netlify.app/.netlify/functions/payment', {
+  fetch('https://codethatdev.com/.netlify/functions/payment', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
