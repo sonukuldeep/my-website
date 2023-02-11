@@ -6,7 +6,7 @@ const Confetti = dynamic(() => import('react-confetti'), {
   ssr: false,
 })
 
-const success = () => {
+const Success = () => {
   const [height, setHeight] = useState<number | undefined>(undefined)
   const [width, setWidth] = useState<number | undefined>(undefined)
   const confetiRef = useRef<HTMLDivElement>(null)
@@ -36,7 +36,7 @@ const success = () => {
   )
 }
 
-export default success
+export default Success
 
 function ConfettiToast({ width, height }: { width: number | undefined, height: number | undefined }) {
   return (
