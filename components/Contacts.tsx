@@ -15,10 +15,10 @@ const Contacts = () => {
     console.log('email', form.email.value);
     console.log('name', form.fullname.value);
     console.log('name', form.msg.value);
+    handleForm(e)
     form.email.value = ""
     form.fullname.value = ""
     form.msg.value = ""
-    handleForm(e)
   };
   useEffect(() => {
     if (state.succeeded) {
