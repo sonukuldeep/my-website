@@ -15,15 +15,18 @@ const Contacts = () => {
     console.log('email', form.email.value);
     console.log('name', form.fullname.value);
     console.log('name', form.msg.value);
+    form.email.value = ""
+    form.fullname.value = ""
+    form.msg.value = ""
     handleForm(e)
   };
-  useEffect(()=>{
-    if(state.succeeded) {
+  useEffect(() => {
+    if (state.succeeded) {
       alert('thank you! I\'ll contact you as soon as possible')
-      
+
     }
 
-  },[state])
+  }, [state])
 
   return (
     <div id='contact' className={styles.container}>
