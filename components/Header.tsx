@@ -7,10 +7,15 @@ const Header = () => {
             <h1>Order your dream website now!</h1>
             <div className={styles.hero_btns}>
                 <button className={styles.btn}>Explore</button>
-                <button className={styles.btn}>Order on Upwork</button>
+                <button className={styles.btn} onClick={openNewTab}>Order on Upwork</button>
             </div>
         </header>
     )
 }
 
 export default Header
+
+function openNewTab() {
+    const url = 'https://www.upwork.com/freelancers/~01cacedd7652ce2fa7'
+    window.open(url, '_blank', 'noreferrer');
+};
