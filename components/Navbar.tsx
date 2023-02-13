@@ -42,7 +42,7 @@ const Navbar = () => {
               <li><Link href='/orders'>Orders</Link></li>
               <li>Coupons</li>
               <li>FAQ</li>
-              <li>Contact</li>
+              <li onClick={()=>goToLocation('#contact')}>Contact</li>
               {userStatus ? <li onClick={signOutUser}>Log out</li> : ""}
             </ul>
           </div>
@@ -130,3 +130,7 @@ function signOutUser() {
       console.log("encountered error during sigin out ", error);
     });
 };
+
+function goToLocation(url: string){
+  window.location.href = url
+}

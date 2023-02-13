@@ -14,7 +14,7 @@ const Contacts = () => {
     console.log('name', form.msg.value);
   };
   return (
-    <div className={styles.container}>
+    <div id='contact' className={styles.container}>
       <h2>Shoot me a message and I&apos;ll contact you</h2>
       <form onSubmit={handleSubmit}>
         <div className={styles.inputfield}>

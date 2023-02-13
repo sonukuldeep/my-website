@@ -15,6 +15,9 @@
 
   /* font-family: 'Source Sans Pro', sans-serif; */
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--stone-2);
 }
