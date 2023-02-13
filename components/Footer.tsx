@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.copyright}>
-            <p>Copyright &copy;{new Date().getFullYear()} EasternWebDev</p>
+            <p>Copyright &copy;{new Date().getFullYear()} CodeThatDev</p>
         </div>
       </div>
     </footer>
