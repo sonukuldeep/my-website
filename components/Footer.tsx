@@ -9,32 +9,32 @@ const Footer = () => {
           <div className={styles.columns_3}>
             <h5>About Us</h5>
             <ul>
-              <li><a href="#">Company Information</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="/underconstruction">Company Information</a></li>
+              <li><a href="/underconstruction">Contact Us</a></li>
+              <li><a href="/underconstruction">Careers</a></li>
             </ul>
           </div>
           <div className={styles.columns_3}>
             <h5>Support</h5>
             <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Help Desk</a></li>
-              <li><a href="#">Forums</a></li>
+              <li><a href="/underconstruction">FAQ</a></li>
+              <li><a href="/underconstruction">Help Desk</a></li>
+              <li><a href="/underconstruction">Forums</a></li>
             </ul>
           </div>
           <div className={styles.columns_3}>
             <h5>Legal</h5>
             <ul>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="/underconstruction">Terms of Service</a></li>
+              <li><a href="/underconstruction">Privacy Policy</a></li>
             </ul>
           </div>
           <div className={styles.columns_3}>
             <h5>Social</h5>
             <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Instagram</a></li>
+              <li><a href="/underconstruction">Facebook</a></li>
+              <li><a href="/underconstruction">Twitter</a></li>
+              <li><a href="/underconstruction">Instagram</a></li>
             </ul>
           </div>
         </div>
