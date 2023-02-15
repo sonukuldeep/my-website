@@ -6,6 +6,10 @@ const nextConfig = {
       {
         source: '/demo/restaurant',
         destination: '/html/restaurant/restaurant.html',
+      },
+      {
+        source: '/demo/music',
+        destination: '/html/music/music.html',
       }
     ]
   }
