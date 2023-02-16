@@ -11,7 +11,7 @@ function UnderConstruction() {
   return (
     <div style={style}>
       <h1>Page Under Construction</h1>
-      <p>We're sorry, but this page is currently under construction.</p>
+      <p>We are sorry, but this page is currently under construction.</p>
     </div>
   );
 }
