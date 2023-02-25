@@ -18,7 +18,7 @@ const Footer = () => {
           <div className={styles.columns_3}>
             <h5>Support</h5>
             <ul>
-              <li><Link href="/underconstruction">FAQ</Link></li>
+              <li><Link href="/faq">FAQ</Link></li>
               <li><Link href="/underconstruction">Help Desk</Link></li>
               <li><Link href="/underconstruction">Forums</Link></li>
             </ul>
@@ -26,8 +26,8 @@ const Footer = () => {
           <div className={styles.columns_3}>
             <h5>Legal</h5>
             <ul>
-              <li><Link href="/underconstruction">Terms of Service</Link></li>
-              <li><Link href="/underconstruction">Privacy Policy</Link></li>
+              <li><Link href="/service">Terms of Service</Link></li>
+              <li><Link href="/privacy">Privacy Policy</Link></li>
             </ul>
           </div>
           <div className={styles.columns_3}>

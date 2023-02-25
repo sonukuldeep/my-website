@@ -40,9 +40,9 @@ const Navbar = () => {
             <ul onClick={() => { setOverlayStatus(pre => !pre) }} className={overlayStatus ? `${styles.dropdown_ul} ${styles.activate}` : `${styles.dropdown_ul}`}>
               <li onClick={signInHandler}>{userStatus ? "Account" : "Log in"}</li>
               <li><Link href='/orders'>Orders</Link></li>
-              <li>Coupons</li>
-              <li>FAQ</li>
-              <li onClick={()=>goToLocation('#contact')}>Contact</li>
+              <li><Link href='#'>Coupons</Link></li>
+              <li><Link href='/faq'>Faq</Link></li>
+              <li><Link href={window.location.origin + '#contact'}>Contact</Link></li>
               {userStatus ? <li onClick={signOutUser}>Log out</li> : ""}
             </ul>
           </div>
@@ -132,5 +132,6 @@ function signOutUser() {
 };
 
 function goToLocation(url: string){
-  window.location.href = url
+  const targetLocation = window.location.origin + url
+  window.location.href = targetLocation
 }

@@ -1,0 +1,45 @@
+@use './utils' as *;
+
+.container {
+    min-height: calc(100vh - 196px);
+    color: #eee;
+    background: gray;
+    padding: 60px 10px;
+
+    h1 {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    li {
+        list-style: disc;
+        margin-left: 30px;
+        text-align: left;
+    }
+    a {
+        text-decoration: underline;
+    }
+}
+
+.secondary {
+    margin: auto;
+    max-width: 95%;
+}
+
+.underline {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0;
+    display: inline-block;
+
+}
+
+@media (min-width: 768px) {
+    .secondary {
+        max-width: 60%;
+    }
+
+}
