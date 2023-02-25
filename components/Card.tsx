@@ -36,7 +36,7 @@ const Card = ({ data }: proptype) => {
       <h3>{heading}</h3>
       <p>{excerpt}</p>
       <div className={style.btn}>
-        <button onClick={() => router.push(`/blog/${data.id}`)}>Explore</button>
+        {/* <button onClick={() => router.push(`/blog/${data.id}`)}>Explore</button> */}
         <button onClick={() => pupulateCartItems(setCartItems, cartItems, data)}>Buy</button>
       </div>
     </div>
