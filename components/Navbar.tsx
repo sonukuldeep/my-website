@@ -18,6 +18,7 @@ const Navbar = () => {
   const { userName } = useContext(UserContext)
   const [userStatus, setUserStatus] = useState(false)
   useOutsideAlerter(cart, setCartStatus)
+  const domain = process.env.NEXT_PUBLIC_DOMAIN
 
   useEffect(() => {
     if (userName.uid !== null)
@@ -42,7 +43,7 @@ const Navbar = () => {
               <li><Link href='/orders'>Orders</Link></li>
               <li><Link href='#'>Coupons</Link></li>
               <li><Link href='/faq'>Faq</Link></li>
-              <li><Link href={window.location.origin + '#contact'}>Contact</Link></li>
+              <li><Link href={domain + '#contact'}>Contact</Link></li>
               {userStatus ? <li onClick={signOutUser}>Log out</li> : ""}
             </ul>
           </div>
