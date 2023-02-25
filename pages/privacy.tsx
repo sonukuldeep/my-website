@@ -61,7 +61,7 @@ const privacy = () => {
                 <ul>
                     <li>You can set your browser to block all cookies, including cookies associated with our Site, or to indicate when a cookie is being sent.</li>
                     <li>You can unsubscribe from our email newsletters or promotional emails by following the instructions in those emails.</li>
-                    <li>You can opt-out of certain third party ad networks that collect information about your online activities. For more information, please visit the Digital Advertising Alliance's opt-out page.</li>
+                    <li>You can opt-out of certain third party ad networks that collect information about your online activities. For more information, please visit the Digital Advertising Alliance&apos;s opt-out page.</li>
                 </ul>
 
                 <h2>Changes to Our Privacy Policy</h2>

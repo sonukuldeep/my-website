@@ -19,7 +19,7 @@ const service = () => {
                         <strong>Account Creation:</strong> In order to use certain features of our website, you may need to create an account. You are responsible for maintaining the confidentiality of your account login information and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security.
                     </li>
                     <li>
-                        <strong>Prohibited Conduct:</strong> You may not use our website for any illegal or unauthorized purpose. You may not, in your use of our website, violate any laws in your jurisdiction (including but not limited to copyright laws), or the laws of any other jurisdiction. You may not use our website to transmit any content that is unlawful, defamatory, obscene, or that infringes on any third party's intellectual property or other rights. You may not interfere with or disrupt the integrity or performance of our website or the data contained therein.
+                        <strong>Prohibited Conduct:</strong> You may not use our website for any illegal or unauthorized purpose. You may not, in your use of our website, violate any laws in your jurisdiction (including but not limited to copyright laws), or the laws of any other jurisdiction. You may not use our website to transmit any content that is unlawful, defamatory, obscene, or that infringes on any third party&apos;s intellectual property or other rights. You may not interfere with or disrupt the integrity or performance of our website or the data contained therein.
                     </li>
                 </ol>
                 <h2>Products and Services</h2>
@@ -47,7 +47,7 @@ const service = () => {
                 <h2>Limitation of Liability</h2>
                 <p>In no event shall codethatdev.com be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in connection with the use of our website or the purchase of our products or services.</p>
                 <h2>Indemnification</h2>
-                <p>You agree to indemnify, defend, and hold harmless codethatdev.com and its officers, directors, employees, agents, and affiliates from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from your use of our website or the purchase of our products or services, or from your violation of these Terms.</p>
+                <p>You agree to indemnify, defend, and hold harmless codethatdev.com and its officers, directors, employees, agents, and affiliates from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys&apos; fees) arising from your use of our website or the purchase of our products or services, or from your violation of these Terms.</p>
                 <h2>Changes to These Terms</h2>
                 <p>We reserve the right to modify these Terms at any time, and such modifications shall be effective immediately upon posting on our website. Your continued use of our website following any such modifications constitutes your acceptance of the modified Terms.</p>
                 <h2>Governing Law</h2>
