@@ -8,7 +8,7 @@ const privacy = () => {
                 <h1>Privacy Policy</h1>
 
                 <h2>Introduction</h2>
-                <p>CodeThatDev ("we," "us," or "our") is committed to protecting your privacy. This privacy policy explains how we collect, use, and protect your personal information when you use our website www.codethatdev.com ("Site"). By accessing or using our Site, you consent to the terms of this privacy policy.</p>
+                <p>CodeThatDev (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting your privacy. This privacy policy explains how we collect, use, and protect your personal information when you use our website www.codethatdev.com (&quot;Site&quot;). By accessing or using our Site, you consent to the terms of this privacy policy.</p>
 
                 <h2>Information We Collect</h2>
                 <p>We may collect personal information from you, such as your name, email address, mailing address, phone number, or credit card information, when you use our Site. We may also collect non-personal information, such as your browser type, IP address, and website usage data.</p>

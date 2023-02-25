@@ -7,7 +7,7 @@ const service = () => {
         <div className={styles.container}>
             <div className={styles.secondary}>
                 <h1>Terms of Service</h1>
-                <p>Welcome to codethatdev.com! These terms of service (the "Terms") apply to your use of our website and the services we offer through the website. By accessing or using our website, you agree to be bound by these Terms. If you do not agree to these Terms, you may not access or use our website.</p>
+                <p>Welcome to codethatdev.com! These terms of service (the &quot;Terms&quot;) apply to your use of our website and the services we offer through the website. By accessing or using our website, you agree to be bound by these Terms. If you do not agree to these Terms, you may not access or use our website.</p>
                 <h2>About codethatdev.com</h2>
                 <p>codethatdev.com provides web development services and sells websites through our website. Our services and products are subject to these Terms, as well as any additional terms and conditions that may apply.</p>
                 <h2>Use of Our Website</h2>
@@ -38,10 +38,10 @@ const service = () => {
                 <h2>Disclaimers</h2>
                 <ol>
                     <li>
-                        <strong>Our Website:</strong> Our website is provided "as is" and without warranties of any kind, express or implied. We do not warrant that our website will be uninterrupted or error-free, that defects will be corrected, or that our website or the server that makes it available are free of viruses or other harmful components. We do not make any warranties or representations regarding the use of the materials on our website in terms of their correctness, accuracy, adequacy, usefulness, timeliness, reliability, or otherwise.
+                        <strong>Our Website:</strong> Our website is provided &quot;as is&quot; and without warranties of any kind, express or implied. We do not warrant that our website will be uninterrupted or error-free, that defects will be corrected, or that our website or the server that makes it available are free of viruses or other harmful components. We do not make any warranties or representations regarding the use of the materials on our website in terms of their correctness, accuracy, adequacy, usefulness, timeliness, reliability, or otherwise.
                     </li>
                     <li>
-                        <strong>Products and Services:</strong> Our products and services are provided "as is" and without warranties of any kind, express or implied. We do not warrant that our products or services will meet your specific requirements, be uninterrupted or error-free, or be free from viruses or other harmful components.
+                        <strong>Products and Services:</strong> Our products and services are provided &quot;as is&quot; and without warranties of any kind, express or implied. We do not warrant that our products or services will meet your specific requirements, be uninterrupted or error-free, or be free from viruses or other harmful components.
                     </li>
                 </ol>
                 <h2>Limitation of Liability</h2>
