@@ -10,9 +10,9 @@ const Footer = () => {
           <div className={styles.columns_3}>
             <h5>About Us</h5>
             <ul>
-              <li><Link href="/underconstruction">Company Information</Link></li>
-              <li><Link href="/underconstruction">Contact Us</Link></li>
-              <li><Link href="/underconstruction">Careers</Link></li>
+              {/* <li><Link href="/underconstruction">Company Information</Link></li> */}
+              <li><Link href="https://codethatdev.com/#contact">Contact Us</Link></li>
+              {/* <li><Link href="/underconstruction">Careers</Link></li> */}
             </ul>
           </div>
           <div className={styles.columns_3}>
@@ -20,7 +20,7 @@ const Footer = () => {
             <ul>
               <li><Link href="/faq">FAQ</Link></li>
               <li><Link href="/underconstruction">Help Desk</Link></li>
-              <li><Link href="/underconstruction">Forums</Link></li>
+              {/* <li><Link href="/underconstruction">Forums</Link></li> */}
             </ul>
           </div>
           <div className={styles.columns_3}>
@@ -33,8 +33,8 @@ const Footer = () => {
           <div className={styles.columns_3}>
             <h5>Social</h5>
             <ul>
-              <li><Link href="/underconstruction">Facebook</Link></li>
-              <li><Link href="/underconstruction">Twitter</Link></li>
+              {/* <li><Link href="/underconstruction">Facebook</Link></li> */}
+              {/* <li><Link href="/underconstruction">Twitter</Link></li> */}
               <li><Link href="/underconstruction">Instagram</Link></li>
             </ul>
           </div>
