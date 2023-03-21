@@ -4,24 +4,9 @@ import CartContext from '../context/CartContext'
 import { useRouter } from 'next/router';
 
 interface proptype {
-  data: {
-    img: string;
-    heading: string;
-    excerpt: string;
-    logo: string;
-    id: number;
-    price: number;
-  }
+  data: ICartItemsType
 }
 
-interface ICartItemsType {
-  id: number;
-  logo: string;
-  heading: string;
-  price: number;
-  excerpt: string;
-  img: string;
-}
 
 const Card = ({ data }: proptype) => {
   const { img, heading, excerpt } = data
@@ -36,8 +21,11 @@ const Card = ({ data }: proptype) => {
       <h3>{heading}</h3>
       <p>{excerpt}</p>
       <div className={style.btn}>
+
+        {/* <a className={style.demo_btn} href={`#`} target="_blank" rel="noreferrer" >Explore</a> */}
         {/* <button onClick={() => router.push(`/blog/${data.id}`)}>Explore</button> */}
-        <button onClick={() => pupulateCartItems(setCartItems, cartItems, data)}>Buy</button>
+        <button onClick={() => openNewTab(data.link)}>Demo</button>
+        {/* <button onClick={() => pupulateCartItems(setCartItems, cartItems, data)}>Buy</button> */}
       </div>
     </div>
   )
@@ -53,3 +41,9 @@ function pupulateCartItems(setCartItems: React.Dispatch<React.SetStateAction<ICa
 
   setCartItems([...cartItems, data])
 }
+
+function openNewTab(url: string) {
+  if (url === "#")
+    return
+  window.open(url, '_blank', 'noreferrer');
+};

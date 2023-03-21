@@ -3,21 +3,7 @@ import CartContext from '../context/CartContext';
 import styles from '../styles/CartItem.module.scss'
 
 interface IData {
-    item: {
-        'id': number;
-        'logo': string;
-        'heading': string;
-        'price': number;
-    }
-}
-
-interface ICartItemsType {
-    id: number;
-    logo: string;
-    heading: string;
-    price: number;
-    excerpt: string;
-    img: string;
+    item: ICartItemsType
 }
 
 const CartItem = ({ item }: IData) => {

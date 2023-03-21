@@ -11,15 +11,6 @@ interface ICartContextType {
     setCartItems: React.Dispatch<React.SetStateAction<ICartItemsType[]>>;
 }
 
-interface ICartItemsType {
-    id: number;
-    logo: string;
-    heading: string;
-    price: number;
-    excerpt: string;
-    img: string;
-}
-
 const CartContext = createContext({} as ICartContextType)
 
 export const CartContextProvider = ({ children }: IChildrenType) => {

@@ -3,15 +3,6 @@ import styles from '../styles/Cart.module.scss'
 import CartContext from '../context/CartContext'
 import CartItem from './CartItem'
 
-interface ICartItemsType {
-  id: number;
-  logo: string;
-  heading: string;
-  price: number;
-  excerpt: string;
-  img: string;
-}
-
 const Cart = () => {
   const { cartStatus } = useContext(CartContext)
   const { cartItems } = useContext(CartContext)
