@@ -12,9 +12,9 @@ const Contacts = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
-    console.log('email', form.email.value);
-    console.log('name', form.fullname.value);
-    console.log('name', form.msg.value);
+    // console.log('email', form.email.value);
+    // console.log('name', form.fullname.value);
+    // console.log('name', form.msg.value);
     handleForm(e)
     form.email.value = ""
     form.fullname.value = ""
@@ -22,10 +22,8 @@ const Contacts = () => {
   };
   useEffect(() => {
     if (state.succeeded) {
-      alert('thank you! I\'ll contact you as soon as possible')
-
+      alert('Thank you! I\'ll contact you as soon as possible')
     }
-
   }, [state])
 
   return (
@@ -57,7 +55,7 @@ const Contacts = () => {
         </div>
         <div className={styles.btn_container}>
           <button className={styles.btn} type="submit">Submit</button>
-          <button className={styles.whatsapp} onClick={openNewTab}>{whatsapp}Chat on WhatsApp</button>
+          {/* <button className={styles.whatsapp} onClick={openNewTab}>{whatsapp}Chat on WhatsApp</button> */}
         </div>
       </form>
     </div>
