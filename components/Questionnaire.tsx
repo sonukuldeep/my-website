@@ -5,10 +5,10 @@ const Questionnaire = () => {
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const form = e.target as HTMLFormElement
-        console.log('type of website', form.websiteType.value);
-        console.log('target audience', form.audience.value);
-        console.log('look and feel', form.look.value);
-        console.log('requested functionaility', form.requests.value);
+        // console.log('type of website', form.websiteType.value);
+        // console.log('target audience', form.audience.value);
+        // console.log('look and feel', form.look.value);
+        // console.log('requested functionaility', form.requests.value);
     }
 
     return (

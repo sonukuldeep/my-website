@@ -9,6 +9,7 @@ import { OverlayContextProvider } from '../context/OverlayContext'
 import { CartContextProvider } from '../context/CartContext'
 import { UserContextProvider } from '../context/UserContext'
 import { ProductContextProvider } from '../context/ProductContext'
+import { Toaster } from 'react-hot-toast'
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -19,6 +20,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                         <CartContextProvider>
                             <ProductContextProvider>
                                 <OverlayContextProvider>
+                                    <Toaster />
                                     <Navbar />
                                 </OverlayContextProvider>
                                 <div>
