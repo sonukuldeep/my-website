@@ -1,5 +1,5 @@
 export const data = [
-    { 'id': 1, 'logo': 'assets/images/hero/11.webp', 'price': 100, 'link': '#', 'heading': 'Ecommerce Website', 'excerpt': 'A fantastic choice if you have stuff to sell', 'img': 'assets/images/hero/11.webp' },
+    { 'id': 1, 'logo': 'assets/images/hero/11.webp', 'price': 100, 'link': 'https://kuldeeps-second-hand-shop.vercel.app/', 'heading': 'Ecommerce Website', 'excerpt': 'A fantastic choice if you have stuff to sell', 'img': 'assets/images/hero/11.webp' },
     { 'id': 2, 'logo': 'assets/images/hero/12.webp', 'price': 100, 'link': 'https://nextjs-blog-kuldeep.vercel.app/', 'heading': 'Blogging website', 'excerpt': 'Perfect for those who wish to show what they\'re upto', 'img': 'assets/images/hero/12.webp' },
     { 'id': 3, 'logo': 'assets/images/hero/15.png', 'price': 100, 'link': 'https://web3-framer-motion-kuldeep.vercel.app/', 'heading': 'Advertisement website', 'excerpt': 'Ideal for small business that need a presence online', 'img': 'assets/images/hero/15.png' },
     { 'id': 4, 'logo': 'assets/images/hero/3.jpg', 'price': 100, 'link': 'https://paint-your-world-kuldeep.netlify.app', 'heading': 'Clone website', 'excerpt': 'You want something similar to your competitor', 'img': 'assets/images/hero/13.jpg' },
