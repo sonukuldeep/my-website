@@ -1,4 +1,3 @@
-import { url } from 'inspector'
 import React from 'react'
 import styles from '../styles/Blog.module.scss'
 
