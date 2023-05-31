@@ -39,9 +39,9 @@ const Navbar = () => {
           </div> */}
           <div className={styles.dropdown}><div className={overlayStatus ? `${styles.menu_title} ${styles.activate}` : `${styles.menu_title}`}><span onClick={() => { setOverlayStatus(pre => !pre) }}><HambugerIcon /></span></div>
             <ul onClick={() => { setOverlayStatus(pre => !pre) }} className={overlayStatus ? `${styles.dropdown_ul} ${styles.activate}` : `${styles.dropdown_ul}`}>
-              <li onClick={signInHandler}>{userStatus ? "Account" : "Log in"}</li>
+              {/* <li onClick={signInHandler}>{userStatus ? "Account" : "Log in"}</li>
               <li><Link href='/orders'>Orders</Link></li>
-              <li><Link href='#'>Coupons</Link></li>
+              <li><Link href='#'>Coupons</Link></li> */}
               <li><Link href='/faq'>Faq</Link></li>
               <li><Link href={'https://codethatdev.com/#contact'}>Contact</Link></li>
               {userStatus ? <li onClick={signOutUser}>Log out</li> : ""}
