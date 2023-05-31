@@ -31,9 +31,10 @@ $paddingX: 0 10px;
         padding: $paddingX;
         border-radius: 4px;
         display: inline-block;
-        background-color: var(--stone-2);
-        color: var(--gray-6);
-        box-shadow: var(--shadow-2);
+        // background-color: var(--stone-2);
+        // color: var(--gray-6);
+        color: #e9e9ed;
+        // box-shadow: var(--shadow-2);
     }
 
     .btn {

@@ -5,13 +5,11 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={`${styles.hero} ${full_width_style.full_width}`}></div>
-            <div>
             <h1>Order your dream website now!</h1>
             <div className={styles.hero_btns}>
                 <button className={styles.btn} onClick={() => goToLocation("#productCategory")}>Explore</button>
                 <button className={styles.btn} onClick={() => openNewTab(1)}>Order on Upwork</button>
                 <button className={styles.btn} onClick={() => openNewTab(2)}>Order on Fiverr</button>
-            </div>
             </div>
         </header>
     )
