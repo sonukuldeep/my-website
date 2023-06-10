@@ -16,14 +16,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <Meta />
-            <Script src='https://www.googletagmanager.com/gtag/js?id=G-932D5P3HNK' strategy='afterInteractive' />
+            {/* <Script src='https://www.googletagmanager.com/gtag/js?id=G-932D5P3HNK' strategy='afterInteractive' />
             <Script id='google-analytics' strategy='afterInteractive'>
                 {` window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
                 gtag('config', 'G-932D5P3HNK');`}
-            </Script>
+            </Script> */}
             <UserContextProvider>
                 <DataContextProvider>
                     <CartContextProvider>
